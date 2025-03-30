@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sinduja's portfolio - Web developer, skills, projects, and resume.">
+    <title>Portfolio - Sinduja P</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -15,43 +18,51 @@
             color: #fff;
             text-align: center;
             padding: 2rem 0;
-            position: relative; /* Add this */
+            position: relative;
         }
 
         .header-content h1 {
             font-size: 2.5rem;
+            margin: 0;
         }
 
-        /* Add styles for the round profile picture */
+        /* Profile Picture */
         .profile-picture {
-            width: 100px; /* Adjust the size as needed */
+            width: 100px;
             height: 100px;
-            border-radius: 75%; /* Create a circular shape */
-            object-fit: cover; /* To ensure the image fills the circular area */
-            position: absolute; /* Add this */
-            top: 75px; /* Adjust top position as needed */
-            left: 75px; /* Adjust left position as needed */
+            border-radius: 50%;
+            object-fit: cover;
+            position: absolute;
+            top: 20px;
+            left: 20px;
         }
 
         nav {
             background-color: #333;
-            color: #fff;
             text-align: center;
+            padding: 10px 0;
         }
 
         nav ul {
             list-style-type: none;
             padding: 0;
+            margin: 0;
         }
 
         nav ul li {
             display: inline;
-            margin: 0 20px;
+            margin: 0 15px;
         }
 
         nav ul li a {
             text-decoration: none;
             color: #fff;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav ul li a:hover {
+            color: #84a6e9;
         }
 
         .section-content {
@@ -66,12 +77,14 @@
         .download-button {
             background-color: #333;
             color: #fff;
-            padding: 0.5rem 1rem;
+            padding: 0.7rem 1.5rem;
             text-decoration: none;
             border-radius: 20px;
             display: inline-block;
             margin-top: 10px;
-            align-self: center;
+            text-align: center;
+            font-weight: bold;
+            transition: background 0.3s ease-in-out;
         }
 
         .download-button:hover {
@@ -83,6 +96,7 @@
             padding: 1rem 0;
             background-color: #333;
             color: #fff;
+            margin-top: 20px;
         }
 
         ul {
@@ -94,10 +108,9 @@
 <body>
     <header>
         <div class="header-content">
-            <!-- Add your profile picture here -->
-            <img src="Sindujaphoto.jpeg" alt="Your Profile Picture" class="profile-picture">
-            <h1>sinduja p</h1>
-            <p>Am computer student </p>
+            <img src="Sindujaphoto.jpeg.jpeg" alt="Profile Picture" class="profile-picture">
+            <h1>Sinduja P</h1>
+            <p>Computer Science Student | Web Developer</p>
         </div>
     </header>
 
@@ -107,27 +120,23 @@
             <li><a href="#education">Education</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="Sindujaresume.pdf">Resume</a></li>
-           
+            <li><a href="Sindujaresume.pdf" download="Sinduja_Resume.pdf">Resume</a></li>
         </ul>
     </nav>
 
     <section id="about">
         <div class="section-content">
             <h2>About Me</h2>
-            <p>I'm a <b>web development</b> expert who is passionate about creating dynamic and user-friendly websites. 
-                I'm driven by the desire to craft high-performance web applications that enhance user experience and provide
-                 seamless digital solutions. Right now i am pursuing my passion in building efficient web application and learning the flow in it.</p>
-
+            <p>I'm a <strong>web developer</strong> passionate about creating dynamic, user-friendly websites. 
+               I enjoy building high-performance web applications that enhance user experience. 
+               Currently, I'm focused on improving my skills and developing efficient applications.</p>
         </div>
     </section>
 
     <section id="education">
         <div class="section-content">
             <h2>Education</h2>
-            <p>Madras University  - BCA</p>
-            
-            
+            <p>Madras University - BCA</p>
         </div>
     </section>
 
@@ -135,10 +144,11 @@
         <div class="section-content">
             <h2>Skills</h2>
             <ul>
-                
-                <li>java</li>
-                <li>c++</li>
-                <li>Java script</li>
+                <li>Java</li>
+                <li>C++</li>
+                <li>JavaScript</li>
+                <li>HTML & CSS</li>
+                <li>React.js</li>
             </ul>
         </div>
     </section>
@@ -147,31 +157,25 @@
         <div class="section-content">
             <h2>Projects</h2>
             <ul>
-                <li><a href="#">digital potfolio</a></li>
-               
+                <li><a href="#">Digital Portfolio</a></li>
                 <li><a href="#">College Portal</a></li> 
-                <!-- Add more project links here -->
             </ul>
         </div>
     </section>
 
     <section id="resume">
-    
         <div class="section-content">
-            <center>
             <h2>Resume</h2>
-            <a href="Sindujaresume.pdf" target="_blank" class="download-button">Download CV</a>
-        </center>
+            <a href="Sindujaresume.pdf" download="Sinduja_Resume.pdf" class="download-button">Download CV</a>
         </div>
-        
     </section>
 
     <footer>
-        <p>&copy; sinduja </p>
+        <p>&copy; 2024 Sinduja</p>
     </footer>
 
     <script>
-        // Smooth scrolling to section when clicking on navigation links
+        // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -181,11 +185,22 @@
 
                 if (targetElement) {
                     window.scrollTo({
-                        top: targetElement.offsetTop,
+                        top: targetElement.offsetTop - 50, // Adjust offset for visibility
                         behavior: 'smooth'
                     });
                 }
             });
+        });
+
+        // Auto-download resume when clicking "Resume" in the navbar
+        document.querySelector('a[href="Sindujaresume.pdf"]').addEventListener('click', function(e) {
+            e.preventDefault();
+            const link = document.createElement('a');
+            link.href = "Sindujaresume.pdf";
+            link.download = "Sinduja_Resume.pdf";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
         });
     </script>
 </body>
